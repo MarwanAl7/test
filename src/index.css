@@ -1,0 +1,98 @@
+/* ألوان مستوحاة من الهوية البصرية السورية: الذهبي، الأخضر الغامق، الرملي.
+   درجات هادئة منخفضة التباين المزعج لراحة العين في القراءة الطويلة. */
+:root {
+  --font-size: 17px;
+
+  --bg: #f3f0e6;
+  --surface: #fbf9f3;
+  --surface-2: #ebe6d6;
+  --border: #ddd6c2;
+  --text: #22302d;
+  --text-muted: #5f6b66;
+  --primary: #054239;
+  --primary-hover: #0a5a4e;
+  --on-primary: #f6f1e2;
+  --gold: #a8925f;
+  --gold-soft: #e7dcc0;
+  --user-bubble: #e1ebe5;
+  --danger: #8a2f2f;
+  --shadow: 0 1px 2px rgba(34, 48, 45, 0.06), 0 4px 16px rgba(34, 48, 45, 0.06);
+  --scrim: rgba(20, 28, 26, 0.35);
+
+  color-scheme: light;
+}
+
+:root[data-theme='dark'] {
+  --bg: #0e1c1a;
+  --surface: #132623;
+  --surface-2: #1b322e;
+  --border: #284540;
+  --text: #e4e0d2;
+  --text-muted: #9fa9a2;
+  --primary: #b9a779;
+  --primary-hover: #cbbb8f;
+  --on-primary: #0e1c1a;
+  --gold: #c9b78a;
+  --gold-soft: #2e3d33;
+  --user-bubble: #1e3833;
+  --danger: #e09a8f;
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.25), 0 6px 20px rgba(0, 0, 0, 0.25);
+  --scrim: rgba(0, 0, 0, 0.5);
+
+  color-scheme: dark;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'IBM Plex Sans Arabic', 'Noto Sans Arabic', Tahoma, system-ui, sans-serif;
+  font-size: var(--font-size);
+  line-height: 1.85;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+button,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: var(--primary);
+}
+
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
+::selection {
+  background: var(--gold-soft);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
